@@ -1,19 +1,18 @@
-
 /*** Spinner Start ***/
 #spinner {
     opacity: 0;
     visibility: hidden;
     transition: opacity .8s ease-out, visibility 0s linear .5s;
     z-index: 99999;
- }
+}
 
- #spinner.show {
-     transition: opacity .8s ease-out, visibility 0s linear .0s;
-     visibility: visible;
-     opacity: 1;
- }
+#spinner.show {
+    transition: opacity .8s ease-out, visibility 0s linear .0s;
+    visibility: visible;
+    opacity: 1;
+}
 
- .back-to-top {
+.back-to-top {
     position: fixed;
     right: 30px;
     bottom: 30px;
@@ -24,24 +23,28 @@
     justify-content: center;
     transition: 0.5s;
     z-index: 99;
-    background-color: #153854;
-    border: 3px solid #e78441;
+    background-color: #e78441;
+    border: 3px solid #e66a18;
 }
+
 /*** Spinner End ***/
 
 
 /*** Button Start ***/
 
 /*** Topbar Start ***/
+body{
+    background: #ffffff;
+    color: #153854;
+}
 .fixed-top {
     transition: 0.5s;
-    background: var(--bs-white);
-    max-width: 1300px;
-    
-    background: rgb(252,255,132);
-    background: linear-gradient(152deg, rgba(252,255,132,1) 0%, rgba(255,253,82,1) 14%, rgba(255,228,92,1) 25%, rgba(255,213,83,1) 37%, rgba(255,198,72,1) 42%, rgba(255,148,33,1) 59%, rgba(255,147,33,1) 78%, rgba(255,132,28,1) 90%, rgba(255,106,20,1) 100%);
-    
-    
+    background: url("../img/Raindrop-3.3s-1084px.png");
+    /*background: rgb(252, 255, 132);
+    background: linear-gradient(152deg, rgba(252, 255, 132, 1) 0%, rgba(255, 253, 82, 1) 14%, rgba(255, 228, 92, 1) 25%, rgba(255, 213, 83, 1) 37%, rgba(255, 198, 72, 1) 42%, rgba(255, 148, 33, 1) 59%, rgba(255, 147, 33, 1) 78%, rgba(255, 132, 28, 1) 90%, rgba(255, 106, 20, 1) 100%);
+    */
+    border: 0;
+
 }
 
 .topbar {
@@ -73,13 +76,15 @@
 }
 
 .topbar .top-link a small:hover {
-    color: #ffffff !important;
+    color:#153854!important;
+    
     transition: 0.5s;
 }
 
 .topbar .top-link a small:hover i {
-    color: #ffffff !important;
+    color: #153854 !important;
 }
+
 /*** Topbar End ***/
 
 /*** Navbar Start ***/
@@ -87,24 +92,25 @@
     padding: 10px 15px;
     font-size: 16px;
     transition: .5s;
-    color: #ffffff !important;
-    
-}
-
-.navbar {
-    height: 70px;
-    
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    color: #153854!important;
 
 }
 
+
+
+/* Navbar link styling */
+
+/* Style for hover effect */
+.navbar-nav .nav-link:hover {
+    border-bottom: 0.5px solid rgba(255, 255, 255);
+}
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active,
 .fixed-top.bg-white .navbar .navbar-nav .nav-link:hover,
 .fixed-top.bg-white .navbar .navbar-nav .nav-link.active {
     color: #153854 !important;
-    
+
 }
 
 .navbar .dropdown-toggle::after {
@@ -112,6 +118,7 @@
     font-weight: 700;
     vertical-align: middle;
     margin-left: 8px;
+    
 }
 
 @media (min-width: 1200px) {
@@ -126,22 +133,8 @@
         opacity: 0;
     }
 }
-@media (max-width: 767px) {
-    .navbar-toggler {
-        color: #153854;
-    }
-    .navbar-nav {
-        margin-top: 60px; /* Adjust margin-top as needed */
-    }
-    .navbar-collapse {
-        background-color: #0c0a0a;
-        border-radius: 10px; /* Adjust the radius as needed */
-        border: '2px';
-    }
-}
-.dropdown .dropdown-menu a:hover {
 
-}
+
 
 .navbar .nav-item:hover .dropdown-menu {
     transform: rotateX(0deg);
@@ -150,7 +143,8 @@
     border-radius: 10px !important;
     transition: .5s;
     opacity: 1;
-    color: #ffffff !important;
+    color: #153854!important;
+    
 }
 
 
@@ -161,6 +155,7 @@
     background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1));
     margin-top: 0;
 }
+
 .hero {
     background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)), url(../img/bgg.png);
     height: 600px;
@@ -169,7 +164,7 @@
     background-size: cover;
 }
 
-.textstyle{
+.textstyle {
     font-family: 'Playfair Display', serif;
     color: #0c0a0a;
     display: inline-block;
@@ -179,30 +174,31 @@
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 2s steps(20), 
-               cursor .4s step-end infinite alternate;
+    animation: typing 2s steps(20),
+        cursor .4s step-end infinite alternate;
 }
+
 .searchBox {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform:  translate(-50%,50%);
+    transform: translate(-50%, 50%);
     background: #2f3640;
     height: 40px;
     border-radius: 40px;
     padding: 0px;
-    
+
 
 }
 
-.searchBox:hover > .searchInput {
+.searchBox:hover>.searchInput {
     width: 240px;
     padding: 0 6px;
 }
 
-.searchBox:hover > .searchButton {
-  background: white;
-  color : #2f3640;
+.searchBox:hover>.searchButton {
+    background: white;
+    color: #2f3640;
 }
 
 .searchButton {
@@ -219,10 +215,10 @@
 }
 
 .searchInput {
-    border:none;
+    border: none;
     background: none;
-    outline:none;
-    float:left;
+    outline: none;
+    float: left;
     padding: 0;
     color: white;
     font-size: 16px;
@@ -233,19 +229,27 @@
 }
 
 @media screen and (max-width: 620px) {
-.searchBox:hover > .searchInput {
-    width: 150px;
-    padding: 0 6px;
+    .searchBox:hover>.searchInput {
+        width: 150px;
+        padding: 0 6px;
+    }
 }
-}
+
 @keyframes cursor {
-    50% {border-color: transparent;}
+    50% {
+        border-color: transparent;
+    }
 }
+
 @keyframes typing {
- 
-    from { width: 0; }
+
+    from {
+        width: 0;
+    }
 }
+
 @media (min-width: 992px) {
+
     .hero-header,
     .hero,
     .page-header {
@@ -254,12 +258,14 @@
 }
 
 @media (max-width: 992px) {
+
     .hero-header,
     .hero,
     .page-header {
-        margin-top: 97px !important;
+        margin-top: -16px !important;
     }
 }
+
 /*** Hero Header end ***/
 
 
@@ -269,7 +275,7 @@
 .pagination {
     display: inline-block;
 }
-  
+
 .pagination a {
 
     padding: 10px 16px;
@@ -278,7 +284,7 @@
 
     margin: 0 4px;
 }
-  
+
 
 /*** Footer Start ***/
 .footer .footer-item .btn-link {
@@ -286,22 +292,56 @@
     color: rgba(255, 255, 255, .5);
     transition: 0.5s;
     color: #ffffff !important;
-    
+    margin-top: 20px;
+
 }
 
 .footer .footer-item .btn-link:hover {
     color: 'white' !important;
     color: #ffffff !important;
-    
+
 }
 
 .footer .footer-item p.mb-4 {
     line-height: 35px;
     color: #ffffff !important;
-    
+
 }
+
 /*** Footer End ***/
 
+.footer-card{
+    transform: translateY(-0.8%) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.footer-card_2{
+    transform: translateY(-0.8%) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 400px;
+    height: 300px;
+    
+}
+.footer-card_3{
+
+    width: 300px;
+    height: 200px;
+    
+}
+.quote {
+    background-color: #153854;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.quote p {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 0;
+    color: #ffffff;
+}
 
 .card:hover .card-body .card-title {
     color: #E68149 !important;
@@ -315,9 +355,10 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.bg{
+.bg {
     background-color: #faf9f7;
 }
+
 /* Normal state */
 a {
     color: #153854;
@@ -325,13 +366,16 @@ a {
 
 /* Hover state */
 a:hover {
-    color: red; /* Change the color for hover state */
+    color: red;
+    /* Change the color for hover state */
 }
 
 /* Visited state */
 a:visited {
-    color: #153854; /* Change the color for visited state */
+    color: #153854;
+    /* Change the color for visited state */
 }
-.btn{
+
+.btn {
     color: #153854;
 }
