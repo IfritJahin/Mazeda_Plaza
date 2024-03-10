@@ -36,15 +36,21 @@
 body{
     background: #ffffff;
     color: #153854;
+    font-family: 'Playfair Display', serif ;
 }
 .fixed-top {
     transition: 0.5s;
-    background: url("../img/Raindrop-3.3s-1084px.png");
+    /*background: url("../img/Raindrop-3.3s-1084px.png");
     /*background: rgb(252, 255, 132);
     background: linear-gradient(152deg, rgba(252, 255, 132, 1) 0%, rgba(255, 253, 82, 1) 14%, rgba(255, 228, 92, 1) 25%, rgba(255, 213, 83, 1) 37%, rgba(255, 198, 72, 1) 42%, rgba(255, 148, 33, 1) 59%, rgba(255, 147, 33, 1) 78%, rgba(255, 132, 28, 1) 90%, rgba(255, 106, 20, 1) 100%);
     */
+    
     border: 0;
-
+    background: #EBECEE;
+    
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .topbar {
@@ -253,7 +259,7 @@ body{
     .hero-header,
     .hero,
     .page-header {
-        margin-top: 132px !important;
+       
     }
 }
 
@@ -262,13 +268,86 @@ body{
     .hero-header,
     .hero,
     .page-header {
-        margin-top: -16px !important;
+       
     }
 }
 
 /*** Hero Header end ***/
 
 
+
+.lines{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+  }
+    
+  .line {
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+    }
+    
+    .line::after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 15vh;
+      width: 100%;
+      top: -50%;
+      left: 0;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #f5a860 75%, #ffffff 100%);
+      animation: drop 5s 0s infinite;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    }
+    
+    .line:nth-child(1) {
+      margin-left: -25%;
+    }
+    
+    .line:nth-child(1)::after {
+      animation-delay: 2s;
+    }
+    
+    .line:nth-child(3) {
+      margin-left: 25%;
+    }
+    
+    .line:nth-child(3)::after {
+      animation-delay: 2.5s;
+    }
+  .about2{
+      display: table;
+      width: 100%;
+      height: 250px;
+      background-color: #fff4db;
+      color: #0d0852;
+      line-height: 1.6;
+      position: relative;
+      font-family: sans-serif;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box !important;
+  }  
+    @keyframes drop {
+      0% {
+        top: -50%;
+      }
+      100% {
+        top: 110%;
+      }
+    }
+    
 
 
 /*** Single Page Start ***/
@@ -379,3 +458,4 @@ a:visited {
 .btn {
     color: #153854;
 }
+
